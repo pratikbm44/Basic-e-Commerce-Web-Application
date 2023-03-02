@@ -1,0 +1,123 @@
+*{
+    font-family: 'popins',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: rgb(2, 7, 2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    /* z-index: 999; */
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(233, 238, 243);
+    transition: o.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color: rgb(121, 104, 234);
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgb(121, 104, 234);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}.payment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #2ecc71 60%, #2ecc71 60%);
+    padding-bottom: 70px;
+}
+
+.payment form{
+    padding: 20px;
+    width: 700px;
+    background:#fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.payment form .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.payment form .row .col{
+    flex: 1 1 150px;
+    margin: 16px;
+}
+
+.payment form .row .col h3{
+    font-size: 20px;
+    color: #333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.payment form .row .col .inputbox{
+    margin: 15px 0;
+}
+.payment form .row .col .inputbox .ExpMonth{
+    margin-top: 34px;
+}
+
+.payment form .row .col .inputbox span{
+    margin-bottom: 10px;
+    display: block;
+}.payment form .row .col .inputbox input{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.payment form .row .col .inputbox input:focus{
+    border: 1px solid #000;
+}
+.payment form .submit-btn{
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background: #27ae60;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.payment form .submit-btn:hover{
+    background: #27ae60 ;
+}

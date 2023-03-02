@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+  <link rel="stylesheet" href="payment.css" />
+  
+  <link rel="stylesheet" href="index.css"/>
+</head>
+
+<body>
+
+  <section id="header" <a href=""><img src="img/logo.png" width="50" height="50" class="logo" alt=""></a>
+
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="shop.html">Shop</a></li>
+        
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+      </ul>
+    </div>
+  </section>
+  
+    <section>
+
+      <div class="payment">
+        
+          <form action="payment3.php" method="post"  name="myForm" onsubmit="return(validate());">
+
+        <div class="row">
+          <div class="col">
+            <h3>Details</h3>
+            
+            <div class="inputbox">
+              <span>quantity :</span>
+              <input type="text" name="qty" placeholder="Enter quantity">
+            </div>
+          
+            <div class="inputbox">
+              <span>full name :</span>
+              <input type="text" name="name" placeholder="Enter Name">
+            </div>
+            <div class="inputbox">
+              <span>Email :</span>
+              <input type="text" name="email" placeholder="Enter Gmail">
+            </div>
+            <div class="inputbox">
+              <span>Address :</span>
+              <input type="address" l name="address" placeholder="Enter Address">
+            </div>
+            <div class="inputbox">
+              <span>City:</span>
+              <input type="text" name="city" placeholder="Enter City">
+            </div>
+            <div class="inputbox">
+              <span>Mobile no.:</span>
+              <input type="text" name="mno" placeholder="Enter mno">
+            </div>
+            <div class="inputbox">
+              <span>Zip Code:</span>
+              <input type="text" name="zip" placeholder="Enter Pin">
+            </div>
+            <!-- <div class="inputbox">
+              <span>amount</span>
+              <input type="hidden" value="<?php echo 200;?>" name="amount">
+            </div>
+            -->
+          </div>
+          <!-- <div class="col">
+            <h3>Payment</h3>
+            <div class="inputbox">
+              <span>cards accepted: </span>
+              <img src="img/payment.jpg" height="36px" width="68%">
+            </div>
+            <div class="inputbox">
+              <span>Name on Card:</span>
+              <input type="text" name="cname" placeholder="Name On Card">
+            </div>
+            <div class="inputbox">
+              <span>Credit card no. :</span>
+              <input type="text" name="cno" placeholder="0000-0000-0000-0000">
+            </div>
+            <div class="inputbox">
+              <span>Exp month:</span>
+              <select name = "ExpMonth">
+                <option value = "-1" selected>[choose month]</option>
+                <option value = "1">jan</option>
+                <option value = "2">feb</option>
+                <option value = "3">march</option>
+                <option value = "4">april</option>
+                <option value = "5">may</option>
+                <option value = "6">june</option>
+                <option value = "7">july</option>
+                <option value = "8">aug</option>
+                <option value = "9">sep</option>
+                <option value = "10">oct</option>
+                <option value = "11">nov</option>
+                <option value = "12">dec</option>
+            
+             </select>
+          
+              
+             <!-- </div>
+            <div class="inputbox">
+              <span>exp year:</span>
+               <input type="text" name="ExpYear">
+            </div>
+            <div class="inputbox">
+              <span>CVV:</span>
+              <input type="text" name="cvv" placeholder="123">
+            </div>
+          </div> -->
+        
+        <input type="submit" value="proceed to checkout" class="submit-btn">
+      
+        </form>
+      </div>
+    </section>
+  
+
+<footer class="footer-distributed">
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a class="link-1" href="index.html">Home</a>
+
+					<a href="shop.html">Shop</a>
+
+					<a href="about.html">About</a>
+
+					<a href="contact.html">Contact</a>
+				</p>
+
+				<p>Online Shopping &copy; 2022</p>
+			</div>
+
+		</footer>
+</body>
+
+</html>
+<script type="text/javascript">
+
+  function validate() {
+
+    if (document.myForm.name.value == "") {
+      alert("Please provide your name!");
+      document.myForm.name.focus();
+      return false;
+    }
+    if (document.myForm.email.value == "") {
+      alert("Please provide your Email!");
+      document.myForm.email.focus();
+      return false;
+    }
+    if (document.myForm.address.value == "") {
+      alert("Please provide your Address!");
+      document.myForm.address.focus();
+      return false;
+    }
+    if (document.myForm.city.value == "") {
+      alert("Please provide your city!");
+      document.myForm.city.focus();
+      return false;
+    }
+    if (document.myForm.mno.value == ""|| document.myForm.mno.value.length != 10) {
+      alert("Please provide your mobile number!");
+      document.myForm.mno.focus();
+      return false;
+    }
+
+    if (document.myForm.zip.value == "" || isNaN(document.myForm.zip.value) ||
+      document.myForm.zip.value.length != 6) {
+
+      alert("Please provide a zip in the format ######.");
+      document.myForm.zip.focus();
+      return false;
+    }
+    // if (document.myForm.cname.value == "") {
+    //   alert("Please provide your name!");
+    //   document.myForm.cname.focus();
+    //   return false;
+    // }
+    // if (document.myForm.cno.value == ""|| document.myForm.cno.value.length != 16)  {
+    //   alert("Please provide your Credit card no!");
+    //   document.myForm.cno.focus();
+    //   return false;
+    // }
+    // if (document.myForm.ExpMonth.value == "-1") {
+    //   alert("Please provide your expiry month!");
+    //   return false;
+    // }
+    // if (document.myForm.ExpYear.value == "-1") {
+    //   alert("Please provide your expiry year!");
+    //   return false;
+    // }
+    // if (document.myForm.cvv.value == "" ||
+    //   document.myForm.cvv.value.length != 3) {
+
+    //   alert("Please provide a cvv in the format ###.");
+    //   document.myForm.cvv.focus();
+    //   return false;
+    // }
+
+    return (true);
+  }
+  //-->
+</script>
